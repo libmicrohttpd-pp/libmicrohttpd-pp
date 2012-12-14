@@ -1,0 +1,31 @@
+libmicrohttpd++
+===============
+
+C++11 wrapper around libmicrohttpd (>= 0.9.20).
+Not 100% equivalent, some functionality was omitted and some sugar was added.
+
+The intent is the same as libmicrohttpd: provide a bare bones web server that is
+suitable for embedded applications and also supports the various server-push
+techniques globally known as Comet (infinite-stream, long-polling, ...).
+
+Currently omitted functionality from libmicrohttpd:
+- SSL support
+- HTTP Authentication support
+- Socket polling
+- External socket or select()
+- Custom unescape callbacks for non-standard URI encodings
+Feel free to contribute to the project if you need any of these! ;-)
+
+Although this is a C++11 library, it is restricted to the C++11 subset actually
+supported by GCC 4.4 (in order to support Debian Squeeze) so if you feel like
+contributing please make sure your code respects this restriction.
+
+
+LICENSING
+=========
+
+libmicrohttpd++ is licensed under the GNU Lesser General Public License v3.0.
+https://www.gnu.org/licenses/lgpl-3.0.txt
+
+Since libmicrohttpd and its dependencies are also licensed under the GNU LGPL,
+the whole stack is suitable for use in non-free proprietary applications.
